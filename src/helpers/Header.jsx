@@ -24,10 +24,6 @@ const Header = () => {
   
   
 `;
-  
-
-
-
 
   const [selectedButton, setSelectedButton] = useState(1);
 
@@ -61,32 +57,16 @@ const Header = () => {
                   id="todos"
                   className="boton-menu boton-categoria active"
                 >
-                 Todos los
-                  productos
+                productos
                 </Button>
               </li>
               <li>
-                <Button isSelected={selectedButton === 2} onClick={() => handleButtonClick(2)} id="abrigos" className="boton-menu boton-categoria">
-                 Abrigos
-                </Button>
-              </li>
-              <li>
-                <Button isSelected={selectedButton === 3} onClick={() => handleButtonClick(3)} id="camisetas" className="boton-menu boton-categoria">
-                   Camisetas
-                </Button>
-              </li>
-              <li>
-                <Button isSelected={selectedButton === 4} onClick={() => handleButtonClick(4)} id="pantalones" className="boton-menu boton-categoria">
-                   Pantalones
-                </Button>
-              </li>
-              <li>
-                <Link className="boton-menu boton-categoria">
+                <Link to={"/Productos"} isSelected={selectedButton === 5} onClick={() => handleButtonClick(5)} className="boton-menu boton-categoria">
                 Crear Productos 
                 </Link>
               </li>
               <li>
-                <Link to={"/Carrito"}><Carro isSelected={selectedButton === 5} onClick={() => handleButtonClick(5)} className="boton-menu boton-carrito">
+                <Link to={"/Carrito"}><Carro isSelected={selectedButton === 6} onClick={() => handleButtonClick(6)} className="boton-menu boton-carrito">
                    Carrito{" "}
                   <span id="numerito" className="numerito">
                     0
